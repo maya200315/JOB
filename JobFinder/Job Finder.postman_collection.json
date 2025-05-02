@@ -1,0 +1,3168 @@
+{
+	"info": {
+		"_postman_id": "a0b372b3-69f5-465f-8121-aafcbad9ab27",
+		"name": "Job Finder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26565263"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup Job Seeker",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"ahmad99\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"job_seeker\",\r\n  \"specialization_id\": 1,\r\n  \"full_name\": \"Ahmad Alkhateeb\",\r\n  \"address\": \"Damascus\",\r\n  \"phone\": \"0934567890\",\r\n  \"age\": 23,\r\n  \"languages\": [\"Arabic\", \"English\"],\r\n  \"gpa\": 3.2,\r\n  \"experience_years\": 2,\r\n  \"skills\": [\r\n    { \"id\": 1, \"rating\": 4 },\r\n    { \"id\": 3, \"rating\": 5 }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup Job Seeker",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_name\": \"ahmad99\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"job_seeker\",\r\n  \"specialization_id\": 1,\r\n  \"full_name\": \"Ahmad Alkhateeb\",\r\n  \"address\": \"Damascus\",\r\n  \"phone\": \"0934567890\",\r\n  \"age\": 23,\r\n  \"languages\": [\"Arabic\", \"English\"],\r\n  \"gpa\": 3.2,\r\n  \"experience_years\": 2,\r\n  \"skills\": [\r\n    { \"id\": 1, \"rating\": 4 },\r\n    { \"id\": 3, \"rating\": 5 }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Apr 2025 22:44:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"user_name\": \"ahmad99\",\n        \"role\": \"job_seeker\",\n        \"updated_at\": \"2025-04-24T22:44:33.000000Z\",\n        \"created_at\": \"2025-04-24T22:44:33.000000Z\",\n        \"id\": 4,\n        \"job_seeker\": {\n            \"id\": 2,\n            \"user_id\": 4,\n            \"specialization_id\": 1,\n            \"full_name\": \"Ahmad Alkhateeb\",\n            \"address\": \"Damascus\",\n            \"phone\": \"0934567890\",\n            \"age\": 23,\n            \"languages\": [\n                \"Arabic\",\n                \"English\"\n            ],\n            \"gpa\": 3.2,\n            \"experience_years\": 2,\n            \"created_at\": \"2025-04-24T22:44:33.000000Z\",\n            \"updated_at\": \"2025-04-24T22:44:33.000000Z\"\n        }\n    },\n    \"message\": \"Account created successfully\",\n    \"code\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Signup Center",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"centerUser\",\r\n  \"password\": \"centerpass\",\r\n  \"role\": \"center\",\r\n  \"center_name\": \"Training Center\",\r\n  \"center_address\": \"Amman, Jordan\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup Center",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_name\": \"centerUser\",\r\n  \"password\": \"centerpass\",\r\n  \"role\": \"center\",\r\n  \"center_name\": \"Training Center\",\r\n  \"center_address\": \"Amman, Jordan\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Apr 2025 22:46:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"user_name\": \"centerUser\",\n        \"role\": \"center\",\n        \"updated_at\": \"2025-04-24T22:46:13.000000Z\",\n        \"created_at\": \"2025-04-24T22:46:13.000000Z\",\n        \"id\": 5\n    },\n    \"message\": \"Account created successfully\",\n    \"code\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Signup Employeer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"employer123\",\r\n  \"password\": \"password123\",\r\n  \"role\": \"employer\",\r\n  \"company_name\": \"Tech Solutions\",\r\n  \"company_phone\": \"1234567890\",\r\n  \"company_address\": \"Beirut, Lebanon\",\r\n  \"specialization_id\": 1\r\n//   \"company_logo\": \"logo.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup Employeer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_name\": \"employer123\",\r\n  \"password\": \"password123\",\r\n  \"role\": \"employer\",\r\n  \"company_name\": \"Tech Solutions\",\r\n  \"company_phone\": \"1234567890\",\r\n  \"company_address\": \"Beirut, Lebanon\",\r\n  \"specialization_id\": 1\r\n//   \"company_logo\": \"logo.jpg\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Apr 2025 22:50:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"user_name\": \"employer123\",\n        \"role\": \"employer\",\n        \"updated_at\": \"2025-04-24T22:50:47.000000Z\",\n        \"created_at\": \"2025-04-24T22:50:47.000000Z\",\n        \"id\": 8\n    },\n    \"message\": \"Account created successfully\",\n    \"code\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Signup Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"admin2\",\r\n  \"password\": \"password\",\r\n  \"role\": \"admin\"\r\n \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_name\": \"admin2\",\r\n  \"password\": \"password\",\r\n  \"role\": \"admin\"\r\n \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 20:09:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"user_name\": \"admin2\",\n        \"role\": \"admin\",\n        \"updated_at\": \"2025-04-25T20:09:48.000000Z\",\n        \"created_at\": \"2025-04-25T20:09:48.000000Z\",\n        \"id\": 10\n    },\n    \"message\": \"Account created successfully\",\n    \"code\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"ahmad99\",\r\n  \"password\": \"12345678\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_name\": \"admin\",\r\n  \"password\": \"password\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 20:11:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"token\": \"6|vffAPnyLhzjRFYU4tsKXmbJ5Ii0g7IQbSD7aZlXrc033d465\",\n        \"role\": \"admin\"\n    },\n    \"message\": \"Login successful\",\n    \"code\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get All Company Pending",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/pending-employers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pending-employers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Company Pending",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/pending-employers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"pending-employers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 20:03:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 8,\n            \"company_name\": \"Tech Solutions\",\n            \"company_phone\": \"1234567890\",\n            \"company_address\": \"Beirut, Lebanon\",\n            \"specialization_id\": 1,\n            \"company_logo\": null,\n            \"is_verified\": null,\n            \"created_at\": \"2025-04-24T22:50:47.000000Z\",\n            \"updated_at\": \"2025-04-24T22:50:47.000000Z\",\n            \"user\": {\n                \"id\": 8,\n                \"user_name\": \"employer123\",\n                \"role\": \"employer\",\n                \"created_at\": \"2025-04-24T22:50:47.000000Z\",\n                \"updated_at\": \"2025-04-24T22:50:47.000000Z\"\n            }\n        }\n    ],\n    \"message\": \"Retrive all company pending\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Specialization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "HR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/specializations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"specializations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Specialization",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "HR",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/specializations",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"specializations"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 19:57:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"name\": \"HR\",\n        \"updated_at\": \"2025-04-25T19:57:38.000000Z\",\n        \"created_at\": \"2025-04-25T19:57:38.000000Z\",\n        \"id\": 3\n    },\n    \"message\": \"Create Specialization Successfuly\",\n    \"code\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Skill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "PHP",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/skills",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"skills"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Skill",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "PHP",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/skills",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"skills"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 20:01:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"name\": \"PHP\",\n        \"updated_at\": \"2025-04-25T20:01:19.000000Z\",\n        \"created_at\": \"2025-04-25T20:01:19.000000Z\",\n        \"id\": 5\n    },\n    \"message\": \"Create Skill Successfuly\",\n    \"code\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Approve Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/approve-employer/{id_employer}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"approve-employer",
+								"{id_employer}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Approve Company",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/approve-employer/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"approve-employer",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 20:04:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"\",\n    \"message\": \"Employer approved\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Reject Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/reject-employer/{id_employer}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"reject-employer",
+								"{id_employer}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Reject Company",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/reject-employer/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"reject-employer",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 20:05:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"\",\n    \"message\": \"Employer rejected\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Specialization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/specializations/{id_specialization}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"specializations",
+								"{id_specialization}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Specialization",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/specializations/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"specializations",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 19:59:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"\",\n    \"message\": \"Specialization deleted Successfuly\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Skill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/skills/{id_skill}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"skills",
+								"{id_skill}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Skill",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/skills/5",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"skills",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 20:01:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"\",\n    \"message\": \"Skill deleted Successfuly\",\n    \"code\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Center",
+			"item": [
+				{
+					"name": "Get All My Courses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|1pH2H9bIEmVvCBU6oSPWHYk9YV2ENyQU7YbO4sGv440a3bd9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/my-courses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"my-courses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All My Courses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/my-courses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"my-courses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 10:49:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"center_id\": 1,\n            \"title\": \"Course Title\",\n            \"description\": \"Course Description\",\n            \"start_date\": \"2025-05-01\",\n            \"end_date\": \"2025-06-01\",\n            \"duration_in_hours\": 40,\n            \"created_at\": \"2025-04-26T10:48:57.000000Z\",\n            \"updated_at\": \"2025-04-26T10:48:57.000000Z\"\n        }\n    ],\n    \"message\": \"My courses retrieved successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|1pH2H9bIEmVvCBU6oSPWHYk9YV2ENyQU7YbO4sGv440a3bd9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Course Title\",\r\n    \"description\": \"Course Description\",\r\n    \"start_date\": \"2025-05-01\",\r\n    \"end_date\": \"2025-06-01\",\r\n    \"duration_in_hours\": 40\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/courses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Course",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Course Title\",\r\n    \"description\": \"Course Description\",\r\n    \"start_date\": \"2025-05-01\",\r\n    \"end_date\": \"2025-06-01\",\r\n    \"duration_in_hours\": 40\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/courses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 10:48:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"Course Title\",\n        \"description\": \"Course Description\",\n        \"start_date\": \"2025-05-01\",\n        \"end_date\": \"2025-06-01\",\n        \"duration_in_hours\": 40,\n        \"center_id\": 1,\n        \"updated_at\": \"2025-04-26T10:48:57.000000Z\",\n        \"created_at\": \"2025-04-26T10:48:57.000000Z\",\n        \"id\": 1\n    },\n    \"message\": \"Course created successfully\",\n    \"code\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|1pH2H9bIEmVvCBU6oSPWHYk9YV2ENyQU7YbO4sGv440a3bd9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Course updated\",\r\n    \"description\": \"Course Description\",\r\n    \"start_date\": \"2025-05-15\",\r\n    \"end_date\": \"2025-06-01\",\r\n    \"duration_in_hours\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/courses/{id_course}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"{id_course}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Course",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Course updated\",\r\n    \"description\": \"Course Description\",\r\n    \"start_date\": \"2025-05-15\",\r\n    \"end_date\": \"2025-06-01\",\r\n    \"duration_in_hours\": 30\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/courses/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"courses",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 10:50:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"center_id\": 1,\n        \"title\": \"Course updated\",\n        \"description\": \"Course Description\",\n        \"start_date\": \"2025-05-15\",\n        \"end_date\": \"2025-06-01\",\n        \"duration_in_hours\": 30,\n        \"created_at\": \"2025-04-26T10:48:57.000000Z\",\n        \"updated_at\": \"2025-04-26T10:50:15.000000Z\"\n    },\n    \"message\": \"Course updated successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|1pH2H9bIEmVvCBU6oSPWHYk9YV2ENyQU7YbO4sGv440a3bd9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/courses/{id_course}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"{id_course}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Course",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/courses/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"courses",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 10:51:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"\",\n    \"message\": \"Course deleted successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "All Role [Used Token]",
+			"item": [
+				{
+					"name": "Get All Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|1pH2H9bIEmVvCBU6oSPWHYk9YV2ENyQU7YbO4sGv440a3bd9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/courses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Course",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/courses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"courses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 10:54:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"center_id\": 1,\n            \"title\": \"Course Title\",\n            \"description\": \"Course Description\",\n            \"start_date\": \"2025-05-01\",\n            \"end_date\": \"2025-06-01\",\n            \"duration_in_hours\": 40,\n            \"created_at\": \"2025-04-26T10:52:04.000000Z\",\n            \"updated_at\": \"2025-04-26T10:52:04.000000Z\",\n            \"center\": {\n                \"id\": 1,\n                \"user_id\": 5,\n                \"center_name\": \"Training Center\",\n                \"center_address\": \"Amman, Jordan\",\n                \"created_at\": \"2025-04-24T22:46:13.000000Z\",\n                \"updated_at\": \"2025-04-24T22:46:13.000000Z\"\n            }\n        }\n    ],\n    \"message\": \"All courses retrieved successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Specializations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/specializations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"specializations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Specializations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/specializations",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"specializations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 19:56:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"IT\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Design\",\n            \"created_at\": null,\n            \"updated_at\": null\n        }\n    ],\n    \"message\": \"Retrive all specializations\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Skills",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|YvwfZ3Rcm0Q7EI5ehd4qbt1NN2DKwuWkZcYHoncx371089f0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/skills",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"skills"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Skills",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/skills",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"skills"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 20:01:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Flutter\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"id\": 2,\n            \"name\": \"API\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Laravel\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Figma\",\n            \"created_at\": null,\n            \"updated_at\": null\n        }\n    ],\n    \"message\": \"Retrive all Skills\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hy0d0cr5bl1kPu6yxL5SBWQXqgjNqNa6A8Y4WkWq16227c69",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/jobs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Jobs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/jobs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"jobs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 11:45:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"employer_id\": 1,\n            \"title\": \"Software Engineer\",\n            \"description\": \"Develop and maintain software applications.\",\n            \"location\": \"New York\",\n            \"salary\": 70000,\n            \"specialization_id\": 1,\n            \"deadline\": \"2025-12-31\",\n            \"created_at\": \"2025-04-26T11:45:09.000000Z\",\n            \"updated_at\": \"2025-04-26T11:45:09.000000Z\",\n            \"employer\": {\n                \"id\": 1,\n                \"user_id\": 8,\n                \"company_name\": \"Tech Solutions\",\n                \"company_phone\": \"1234567890\",\n                \"company_address\": \"Beirut, Lebanon\",\n                \"specialization_id\": 1,\n                \"company_logo\": null,\n                \"is_verified\": 1,\n                \"created_at\": \"2025-04-24T22:50:47.000000Z\",\n                \"updated_at\": \"2025-04-25T20:05:35.000000Z\"\n            }\n        }\n    ],\n    \"message\": \"All jobs retrieved successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Notifications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|8IDgKjKAe1w9pet9km4ryMXzc74hBD8PAfrieFz51da49f66",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/notifications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"notifications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Notifications",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/notifications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"notifications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 14:07:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"user_id\": 4,\n            \"title\": \"Job Application Update\",\n            \"message\": \"Sorry, your application in Tech Solutions has been rejected.\"\n        }\n    ],\n    \"message\": \"Notifications retrieved successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Employer",
+			"item": [
+				{
+					"name": "Get All My Jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hy0d0cr5bl1kPu6yxL5SBWQXqgjNqNa6A8Y4WkWq16227c69",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/my-jobs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"my-jobs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All My Jobs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/my-jobs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"my-jobs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 11:38:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"employer_id\": 1,\n            \"title\": \"Flutter\",\n            \"description\": \"Develop and maintain software applications.\",\n            \"location\": \"New York\",\n            \"salary\": 70000,\n            \"specialization_id\": 1,\n            \"deadline\": \"2025-12-31\",\n            \"created_at\": \"2025-04-26T11:14:28.000000Z\",\n            \"updated_at\": \"2025-04-26T11:37:47.000000Z\"\n        }\n    ],\n    \"message\": \"Employer jobs retrieved successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hy0d0cr5bl1kPu6yxL5SBWQXqgjNqNa6A8Y4WkWq16227c69",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Software Engineer\",\r\n    \"description\": \"Develop and maintain software applications.\",\r\n    \"location\": \"New York\",\r\n    \"salary\": 70000,\r\n    \"specialization_id\": 1,\r\n    \"deadline\": \"2025-12-31\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/jobs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Verified",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Software Engineer\",\r\n    \"description\": \"Develop and maintain software applications.\",\r\n    \"location\": \"New York\",\r\n    \"salary\": 70000,\r\n    \"specialization_id\": 1,\r\n    \"deadline\": \"2025-12-31\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/jobs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"jobs"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 11:14:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"Software Engineer\",\n        \"description\": \"Develop and maintain software applications.\",\n        \"location\": \"New York\",\n        \"salary\": 70000,\n        \"specialization_id\": 1,\n        \"deadline\": \"2025-12-31\",\n        \"employer_id\": 1,\n        \"updated_at\": \"2025-04-26T11:14:28.000000Z\",\n        \"created_at\": \"2025-04-26T11:14:28.000000Z\",\n        \"id\": 2\n    },\n    \"message\": \"Job created successfully\",\n    \"code\": 201\n}"
+						},
+						{
+							"name": "Not Verified",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Software Engineer\",\r\n    \"description\": \"Develop and maintain software applications.\",\r\n    \"location\": \"New York\",\r\n    \"salary\": 70000,\r\n    \"specialization_id\": 1,\r\n    \"deadline\": \"2025-12-31\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/jobs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"jobs"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 11:43:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Your account is not verified to perform this action.\",\n    \"code\": 403\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hy0d0cr5bl1kPu6yxL5SBWQXqgjNqNa6A8Y4WkWq16227c69",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Flutter\",\r\n    \"description\": \"Develop and maintain software applications.\",\r\n    \"location\": \"New York\",\r\n    \"salary\": 70000,\r\n    \"specialization_id\": 1,\r\n    \"deadline\": \"2025-12-31\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/jobs/{id_job}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"{id_job}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Job",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Flutter\",\r\n    \"description\": \"Develop and maintain software applications.\",\r\n    \"location\": \"New York\",\r\n    \"salary\": 70000,\r\n    \"specialization_id\": 1,\r\n    \"deadline\": \"2025-12-31\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/jobs/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"jobs",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 11:37:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"employer_id\": 1,\n        \"title\": \"Flutter\",\n        \"description\": \"Develop and maintain software applications.\",\n        \"location\": \"New York\",\n        \"salary\": 70000,\n        \"specialization_id\": 1,\n        \"deadline\": \"2025-12-31\",\n        \"created_at\": \"2025-04-26T11:14:28.000000Z\",\n        \"updated_at\": \"2025-04-26T11:37:47.000000Z\"\n    },\n    \"message\": \"Job updated successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Applicants",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hy0d0cr5bl1kPu6yxL5SBWQXqgjNqNa6A8Y4WkWq16227c69",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/jobs/{job_id}/applicants",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"{job_id}",
+								"applicants"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Applicants",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Flutter\",\r\n    \"description\": \"Develop and maintain software applications.\",\r\n    \"location\": \"New York\",\r\n    \"salary\": 70000,\r\n    \"specialization_id\": 1,\r\n    \"deadline\": \"2025-12-31\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/jobs/4/applicants",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"jobs",
+										"4",
+										"applicants"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:40:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"application_id\": 3,\n            \"applied_at\": \"2025-04-26 13:26:09\",\n            \"job_seeker\": {\n                \"id\": 2,\n                \"full_name\": \"Ahmad Alkhateeb\",\n                \"address\": \"Damascus\",\n                \"phone\": \"0934567890\",\n                \"age\": 23,\n                \"languages\": [\n                    \"Arabic\",\n                    \"English\"\n                ],\n                \"gpa\": 3.2,\n                \"experience_years\": 2,\n                \"specialization\": \"IT\",\n                \"skills\": [\n                    \"Flutter\",\n                    \"Laravel\"\n                ]\n            }\n        }\n    ],\n    \"message\": \"Job applicants retrieved successfully.\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hy0d0cr5bl1kPu6yxL5SBWQXqgjNqNa6A8Y4WkWq16227c69",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/jobs/{id_job}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"{id_job}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Job",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/jobs/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"jobs",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 11:39:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"\",\n    \"message\": \"Job deleted successfully\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Accept Application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hy0d0cr5bl1kPu6yxL5SBWQXqgjNqNa6A8Y4WkWq16227c69",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/applications/{application_id}/respond/accepted",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"applications",
+								"{application_id}",
+								"respond",
+								"accepted"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Accept Application",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/applications/3/respond/accepted",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"applications",
+										"3",
+										"respond",
+										"accepted"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 14:02:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"job_id\": 4,\n        \"job_seeker_id\": 2,\n        \"status\": \"accepted\",\n        \"applied_at\": \"2025-04-26 16:26:09\",\n        \"job_seeker\": {\n            \"id\": 2,\n            \"user_id\": 4,\n            \"specialization_id\": 1,\n            \"full_name\": \"Ahmad Alkhateeb\",\n            \"address\": \"Damascus\",\n            \"phone\": \"0934567890\",\n            \"age\": 23,\n            \"languages\": [\n                \"Arabic\",\n                \"English\"\n            ],\n            \"gpa\": 3.2,\n            \"experience_years\": 2,\n            \"user\": {\n                \"id\": 4,\n                \"user_name\": \"ahmad99\",\n                \"role\": \"job_seeker\"\n            }\n        }\n    },\n    \"message\": \"Application status updated successfully.\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Reject Application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|hy0d0cr5bl1kPu6yxL5SBWQXqgjNqNa6A8Y4WkWq16227c69",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/applications/{application_id}/respond/rejected",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"applications",
+								"{application_id}",
+								"respond",
+								"rejected"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Reject Application",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/applications/3/respond/rejected",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"applications",
+										"3",
+										"respond",
+										"rejected"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 14:03:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"job_id\": 4,\n        \"job_seeker_id\": 2,\n        \"status\": \"rejected\",\n        \"applied_at\": \"2025-04-26 16:26:09\",\n        \"job_seeker\": {\n            \"id\": 2,\n            \"user_id\": 4,\n            \"specialization_id\": 1,\n            \"full_name\": \"Ahmad Alkhateeb\",\n            \"address\": \"Damascus\",\n            \"phone\": \"0934567890\",\n            \"age\": 23,\n            \"languages\": [\n                \"Arabic\",\n                \"English\"\n            ],\n            \"gpa\": 3.2,\n            \"experience_years\": 2,\n            \"user\": {\n                \"id\": 4,\n                \"user_name\": \"ahmad99\",\n                \"role\": \"job_seeker\"\n            }\n        }\n    },\n    \"message\": \"Application status updated successfully.\",\n    \"code\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Job Seeker",
+			"item": [
+				{
+					"name": "Get Opportunities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|8IDgKjKAe1w9pet9km4ryMXzc74hBD8PAfrieFz51da49f66",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/opportunities",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"opportunities"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[Jobs] If there are jobs in the same specialty",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/opportunities",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"opportunities"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 11:57:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"employer_id\": 1,\n            \"title\": \"Software Engineer\",\n            \"description\": \"Develop and maintain software applications.\",\n            \"location\": \"New York\",\n            \"salary\": 70000,\n            \"specialization_id\": 1,\n            \"deadline\": \"2025-12-31\",\n            \"created_at\": \"2025-04-26T11:45:09.000000Z\",\n            \"updated_at\": \"2025-04-26T11:45:09.000000Z\",\n            \"employer\": {\n                \"id\": 1,\n                \"user_id\": 8,\n                \"company_name\": \"Tech Solutions\",\n                \"company_phone\": \"1234567890\",\n                \"company_address\": \"Beirut, Lebanon\",\n                \"specialization_id\": 1,\n                \"company_logo\": null,\n                \"is_verified\": 1,\n                \"created_at\": \"2025-04-24T22:50:47.000000Z\",\n                \"updated_at\": \"2025-04-25T20:05:35.000000Z\"\n            }\n        }\n    ],\n    \"message\": \"Jobs fetched successfully\",\n    \"code\": 200\n}"
+						},
+						{
+							"name": "[Course] If there are no jobs in the same specialty",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/opportunities",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"opportunities"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 11:58:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"center_id\": 1,\n            \"title\": \"Course Title\",\n            \"description\": \"Course Description\",\n            \"start_date\": \"2025-05-01\",\n            \"end_date\": \"2025-06-01\",\n            \"duration_in_hours\": 40,\n            \"created_at\": \"2025-04-26T10:52:04.000000Z\",\n            \"updated_at\": \"2025-04-26T10:52:04.000000Z\",\n            \"center\": {\n                \"id\": 1,\n                \"user_id\": 5,\n                \"center_name\": \"Training Center\",\n                \"center_address\": \"Amman, Jordan\",\n                \"created_at\": \"2025-04-24T22:46:13.000000Z\",\n                \"updated_at\": \"2025-04-24T22:46:13.000000Z\"\n            }\n        }\n    ],\n    \"message\": \"No jobs found for your specialization. Showing available courses instead.\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Apply Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|8IDgKjKAe1w9pet9km4ryMXzc74hBD8PAfrieFz51da49f66",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/jobs/{id_job}/apply",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"{id_job}",
+								"apply"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Apply Job",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/jobs/4/apply",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"jobs",
+										"4",
+										"apply"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:25:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"job_id\": 4,\n        \"job_seeker_id\": 2,\n        \"status\": \"pending\",\n        \"updated_at\": \"2025-04-26T13:25:02.000000Z\",\n        \"created_at\": \"2025-04-26T13:25:02.000000Z\",\n        \"id\": 2\n    },\n    \"message\": \"Applied successfully to the job.\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Withdraw Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|8IDgKjKAe1w9pet9km4ryMXzc74hBD8PAfrieFz51da49f66",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/jobs/{Id_job}/withdraw",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"{Id_job}",
+								"withdraw"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Withdraw Job",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/jobs/4/withdraw",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"jobs",
+										"4",
+										"withdraw"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:22:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"\",\n    \"message\": \"Application withdrawn successfully.\",\n    \"code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All My Applications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|8IDgKjKAe1w9pet9km4ryMXzc74hBD8PAfrieFz51da49f66",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/my-applications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"my-applications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All My Applications",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/my-applications",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"my-applications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:26:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"job_id\": 4,\n            \"job_seeker_id\": 2,\n            \"status\": \"pending\",\n            \"applied_at\": \"2025-04-26 16:26:09\",\n            \"created_at\": \"2025-04-26T13:26:09.000000Z\",\n            \"updated_at\": \"2025-04-26T13:26:09.000000Z\",\n            \"job\": {\n                \"id\": 4,\n                \"employer_id\": 1,\n                \"title\": \"Software Engineer\",\n                \"description\": \"Develop and maintain software applications.\",\n                \"location\": \"New York\",\n                \"salary\": 70000,\n                \"specialization_id\": 2,\n                \"deadline\": \"2025-12-31\",\n                \"created_at\": \"2025-04-26T11:45:09.000000Z\",\n                \"updated_at\": \"2025-04-26T11:45:09.000000Z\"\n            }\n        }\n    ],\n    \"message\": \"Your job applications retrieved successfully.\",\n    \"code\": 200\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
